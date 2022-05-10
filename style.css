@@ -7,10 +7,10 @@
 :root {
 
   --primary-color: hsl(0, 45%, 27%);
-  --headline: hsl(210, 11%, 15%);
+  --headline: hsl(0, 0%, 0%);
   --paragraph: hsl(210, 9%, 31%);
   --brand-beige: hsl(39, 100%, 97%);
-  --brand-light: hsl(25, 41%, 58%);
+  --brand-light: hsl(3, 100%, 21%);
 
 
   font-size: 62.5%; /* 1rem = 10px*/
@@ -36,7 +36,7 @@ header {
 
 h4 {
   font-size: 1.4rem;
-  color: var(--primary-color);
+  color: var(--headline);
   margin-bottom: 1.6rem;
 }
 
@@ -83,12 +83,6 @@ button {
   
 }
 
-img {
-
-  width: 26rem;
-  height: 36rem;
-  
-}
 
 .stats {
   width: 38.7rem;
@@ -124,4 +118,25 @@ img {
   color: var(--primary-color);
   font-size: 1.6rem;
   line-height: 150%;
+}
+
+header img {
+  width: 26.4rem;
+  display: block;
+  margin-inline: auto;
+  object-position: 0 2rem;
+}
+
+header::before {
+  content: "";
+  width: 100vw;
+  height: 108rem;
+  background-color: var(--brand-light);
+  display: block;
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
 }
