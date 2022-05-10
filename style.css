@@ -10,6 +10,7 @@
   --headline: hsl(210, 11%, 15%);
   --paragraph: hsl(210, 9%, 31%);
   --brand-beige: hsl(39, 100%, 97%);
+  --brand-light: hsl(25, 41%, 58%);
 
 
   font-size: 62.5%; /* 1rem = 10px*/
@@ -90,12 +91,14 @@ img {
 }
 
 .stats {
-  width: 32.7rem;
-  height: 47rem;
-
+  width: 38.7rem;
+  
+  padding-block: 4rem;
   margin-inline: auto;
   
   background-color: var(--brand-beige);
+  border: 1px solid var(--brand-light);
+  border-radius: 0.6rem;
 
   display: flex;
   flex-direction: column;
@@ -103,10 +106,11 @@ img {
   gap: 6rem;
 
   padding-top: 4rem;
+
 }
 
 .stat h3 {
-  font-size: 4.8rem;
+  font-size: 4rem;
   color: var(--headline);
   line-height: 130%;
 
