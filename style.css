@@ -10,7 +10,7 @@
   --headline: hsl(0, 0%, 0%);
   --paragraph: hsl(210, 9%, 31%);
   --brand-beige: hsl(39, 100%, 97%);
-  --brand-light: hsl(3, 100%, 21%);
+  --brand-light: hsl(18, 100%, 86%);
 
 
   font-size: 62.5%; /* 1rem = 10px*/
@@ -34,13 +34,13 @@ header {
   padding-left: 2rem;
 }
 
-h4 {
+header h4 {
   font-size: 1.4rem;
   color: var(--headline);
   margin-bottom: 1.6rem;
 }
 
-h1 {
+header h1 {
   font-size: 3.4rem;
   color: var(--headline);
   line-height: 130%;
@@ -138,5 +138,11 @@ header::before {
   top: 0;
   left: 0;
   z-index: -1;
+
+}
+
+nav {
+  align-items: center;
+  flex-direction: column;
 
 }
