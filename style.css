@@ -1,3 +1,5 @@
+/*===GERAL====*/
+
 *{
   margin: 0;
   box-sizing: border-box;
@@ -6,14 +8,17 @@
 
 :root {
 
-  --primary-color: hsl(0, 45%, 27%);
+  --primary-color: hsl(0, 100%, 16%);
   --headline: hsl(0, 0%, 0%);
   --paragraph: hsl(210, 9%, 31%);
   --brand-beige: hsl(39, 100%, 97%);
-  --brand-light: hsl(18, 100%, 86%);
+  --brand-light: hsl(45, 84%, 93%);
+  --color-color: #300000;
 
 
   font-size: 62.5%; /* 1rem = 10px*/
+
+  --nav-height: 7.2rem;  
 }
 
 
@@ -23,16 +28,40 @@ body {
 
   text-align: center;
 }
+.wrapper {
 
-header {
-  margin-top: 4.1rem;
   width: 37.5rem;
   margin-right: auto;
   margin-left: auto;
-
-  padding-right: 2rem;
-  padding-left: 2rem;
+  padding-inline: 0.01rem;
+ 
 }
+
+
+/*=====HEADER=====*/
+
+header {
+  margin-top: calc(4.1rem + var(--nav-height));
+
+ /* padding-right: 2rem;
+  padding-left: 2rem;*/
+}
+
+
+header::before {
+  content: "";
+  width: 100vw;
+  height: calc(108rem + var(--nav-height));
+  background-color: var(--brand-light);
+  display: block;
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+}
+
 
 header h4 {
   font-size: 1.4rem;
@@ -49,7 +78,7 @@ header h1 {
 
 }
 
-p {
+header p {
   font-size: 1.8rem;
   line-height: 150%; 
   font-weight: 400;
@@ -58,7 +87,8 @@ p {
   margin-bottom: 3.2rem;
 }
 
-button {
+
+header button {
   background: var(--primary-color);
   
   border: none;
@@ -83,8 +113,15 @@ button {
   
 }
 
+header img {
+  width: 26.4rem;
+  display: block;
+  margin-inline: auto;
+  object-position: 0 2rem;
+}
 
-.stats {
+
+header .stats {
   width: 38.7rem;
   
   padding-block: 4rem;
@@ -120,29 +157,31 @@ button {
   line-height: 150%;
 }
 
-header img {
-  width: 26.4rem;
-  display: block;
-  margin-inline: auto;
-  object-position: 0 2rem;
-}
 
-header::before {
-  content: "";
-  width: 100vw;
-  height: 108rem;
-  background-color: var(--brand-light);
-  display: block;
-  
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-
-}
+/*===NAVIGATION===*/
 
 nav {
-  align-items: center;
-  flex-direction: column;
+  display: flex;
+  
 
+  height: var(--nav-height);
+  /*padding: 0.01rem 0.3rem;*/
+
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+nav .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+nav.scroll {
+  background: var(--color-color);
+  width: 100vw;
 }
