@@ -33,7 +33,10 @@ body {
   font-size: 1.6rem;
 
   text-align: center;
+
+  overflow: overlay;
 }
+
 .wrapper {
 
   width: 37.5rem;
@@ -97,7 +100,7 @@ header p {
 }
 
 
-header button {
+header button { /*------------------*/
   background: var(--primary-color);
   
   border: none;
@@ -108,9 +111,9 @@ header button {
   width: 26.3rem;
 
   color: white;
-  text-transform: uppercase;
   font-size: 1.4rem;
   font-weight: 700;
+  text-transform: uppercase;
 
   display: flex;
   align-items: center;
@@ -193,11 +196,32 @@ nav .wrapper {
 nav.scroll {
   background: var(--color-color);
   width: 100vw;
+  position: fixed;
+  top: 0;
 }
+
+nav.scroll svg:nth-child(1) path {
+  fill: #000000;
+}
+
+nav.scroll button path {
+  stroke: #FFFFFF;
+}
+
+nav button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 
 /*===MENU-EXPANDED===========*/
 body.menu-expanded {
   overflow: hidden;
+}
+
+body.menu-expanded > :not(nav){
+  display:none ;
 }
 
 .menu,
@@ -221,9 +245,11 @@ body.menu-expanded .menu {
 
   width: 100vw;
   height: 100vh;
+
+  padding-top: var(--nav-height);
 }
 
-body.menu-expanded .nav{
+body.menu-expanded nav{
   position: relative;
 }
 
@@ -269,3 +295,20 @@ body.menu-expanded .nav{
   justify-content: center;
   gap: 3.2rem;
 }
+
+body.menu-expanded .logo,
+body.menu-expanded nav button { /*o erro está aqui*/
+  position: relative;
+  z-index: 100;
+  
+}
+
+body.menu-expanded .logo  path {
+  fill: #000000;
+}
+
+body.menu-expanded button path {
+  stroke: #FFFFFF; 
+}
+
+  

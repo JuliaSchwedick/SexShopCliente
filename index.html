@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
   </head>
-  <body onscroll="onScroll()" class="menu-expanded">
+  <body onscroll="onScroll()" class="">
     <nav id="navigation" class="scroll">
       <div class="wrapper">
         <a class="logo" href="#">
@@ -87,7 +87,12 @@
           </ul>
         </div>
 
-        <button class="open-menu">
+        <button 
+        aria-expanded="false"
+        aria-label="Open menu"
+        onclick="openMenu()"
+
+        class="open-menu">
           <svg
           width="40"
           height="40"
@@ -119,7 +124,11 @@
         </svg>
         </button>
 
-        <button class="close-menu">
+        <button 
+        aria-expanded="true"
+        aria-label="Close Menu"
+        onclick="closeMenu()"
+        class="close-menu">
           <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M21 1L1 21M1 1L21 21" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -151,9 +160,9 @@
             fill="white"
           />
         </svg>
-
         Tire suas dúvidas!
       </button>
+      
       <img src="assets/silhouette-147166_1280.png" alt="mulher com chicote" />
 
       <div class="stats">
